@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Laboratorista extends Model
 {
     use HasFactory;
-    Public function paciente(){
-        return $this->belongsToMany(Paciente::class, 'laboratorista:paciente');
+    Public function pacientes(){
+        return $this->belongsToMany(Paciente::class, 'paciente_laboratorista');
     }
 }

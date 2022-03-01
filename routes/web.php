@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LaboratoristaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::resource('pacientes','App\Http\Controllers\PacienteController');
-Route::get('/','App\Http\Controllers\RelacionPacienteLaboratoristaController@index');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::resource('pacientes','App\Http\Controllers\PacienteController');
+Route::resource('laboratoristas','App\Http\Controllers\LaboratoristaController');
+Route::get('relacion','App\Http\Controllers\RelacionPacienteLaboratoristaController@index');

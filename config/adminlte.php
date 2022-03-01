@@ -250,15 +250,29 @@ return [
             'text'        => 'Pacientes',
             'url'         => 'pacientes',
             'icon'        => 'far fa-fw fa-user',
-            'label'       => 'Paciente',
+            'label'       => '1',
             'label_color' => 'warning',
         ],
-        ['header' => 'Configuracion de la Cuenta'],
         [
-            'text' => 'Perfil de usuario',
-            'url'  => 'user/profile',
-            'icon' => 'fas fa-fw fa-user',
+            'text'        => 'Laboratoristas',
+            'url'         => 'laboratoristas',
+            'icon'        => 'far fa-fw fa-heart',
+            'label'       => '2',
+            'label_color' => 'danger',
         ],
+        [
+            'text'        => 'Relacion',
+            'url'         => 'relacion',
+            'icon'        => 'far fa-fw fa-heart',
+            'label'       => '3',
+            'label_color' => 'info',
+        ],
+    //    ['header' => 'Configuracion de la Cuenta'],
+     //   [
+      //      'text' => 'Perfil de usuario',
+     //       'url'  => 'user/profile',
+     //       'icon' => 'fas fa-fw fa-user',
+     //   ],
     //    [
     //        'text' => 'change_password',
     //        'url'  => 'admin/settings',
@@ -302,22 +316,22 @@ return [
     //            ],
     //        ],
     //    ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+     //   ['header' => 'labels'],
+     //   [
+     //       'text'       => 'important',
+     //       'icon_color' => 'red',
+     //       'url'        => '#',
+     //   ],
+     //   [
+     //       'text'       => 'warning',
+     //       'icon_color' => 'yellow',
+      //      'url'        => '#',
+       // ],
+     //   [
+     //       'text'       => 'information',
+     //       'icon_color' => 'cyan',
+     //       'url'        => '#',
+     //   ],
     ],
 
     /*
