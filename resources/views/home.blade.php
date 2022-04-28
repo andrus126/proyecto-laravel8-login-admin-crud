@@ -1,23 +1,31 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Menu Principal')
+
+@section('content_header')
+   
+@stop
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@section('css')
+    
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+@stop
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+@section('js')
+    <script> console.log('Hi!'); </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+
+    $(document).ready(function() {
+        $('#pacientes').DataTable({
+            "lengthMenu": [[5, 10, 50, -1], [5, 10, 50, "All"]]
+        });
+    } );
+    </script>
+@stop

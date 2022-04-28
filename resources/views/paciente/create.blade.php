@@ -9,10 +9,7 @@
 @section('content')
     <form action="/pacientes" method="POST">
     @csrf
-    <div class="mb-3">
-        <label for="" class="form-label">CI</label>
-        <input id="ci" name="ci" type="text" class="form-control" tabindex="1">
-    </div>
+   
     <div class="mb-3">
         <label for="" class="form-label">Nombre</label>
         <input id="nombre" name="nombre" type="text" class="form-control" tabindex="1">
@@ -24,6 +21,10 @@
     <div class="mb-3">
         <label for="" class="form-label">Ap. Materno</label>
         <input id="materno" name="materno" type="text" class="form-control" tabindex="3">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">CI</label>
+        <input id="ci" name="ci" type="text" class="form-control" tabindex="1">
     </div>
     <div class="mb-3">
         <label for="" class="form-label">Edad</label>

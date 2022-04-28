@@ -9,8 +9,11 @@ use Illuminate\Http\Request;
 class RelacionPacienteLaboratoristaController extends Controller
 {
    public function index(){
-       $paciente = Paciente::find(14);
-       $laboratorista = Laboratorista::find(2);
+       $paciente = Paciente::find(1);
+     
+       $laboratorista = Laboratorista::find(1);
+       
+       
        return view('paciente.mostrar', compact('paciente', 'laboratorista'));
    } 
 }

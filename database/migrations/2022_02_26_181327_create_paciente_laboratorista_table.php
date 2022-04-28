@@ -24,7 +24,7 @@ class CreatePacienteLaboratoristaTable extends Migration
 
             $table->foreignId('laboratorista_id')
                 ->nullable()
-                ->constrained('laboratorista')
+                ->constrained('laboratoristas')
                 ->cascadaOnUpdate()
                 ->nullOnDelete();
         });

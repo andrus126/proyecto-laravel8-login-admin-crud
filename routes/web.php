@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LaboratoristaController;
+use App\Http\Controllers\SocialController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('auth/facebook', [SocialController::class, 'redirectFacebook']);
+Route::get('auth/facebook/callback', [SocialController::class, 'callbackFacebook']);
 
 Route::resource('pacientes','App\Http\Controllers\PacienteController');
 Route::resource('laboratoristas','App\Http\Controllers\LaboratoristaController');
